@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util" 
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+
+<!-- <bean id="alienObject" class="com.shadab.Spring_XML.Alien" >
+<property name="age" value = "10" ></property>
+<property name="lap" ref ="laptopObject"></property>
+</bean> -->
+
+<!-- Autowiring -->
+<bean id="alienObject" class = "com.shadab.Spring_XML.Alien" autowire="byType">
+<property name="age" value="23"></property>
+</bean>
+
+<bean id="laptopObject" class="com.shadab.Spring_XML.Laptop" ></bean>
+</beans>
